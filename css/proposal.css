@@ -3,3 +3,19 @@ h1 {
     font-family: "Roboto", sans-serif;
     text-align: center;
 }
+
+h2 {
+    font-family: "Helvetica",  "Roboto", sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.example{
+    color: darkred;
+    text-decoration: underline;
+}
