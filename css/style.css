@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.perfume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfume-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.perfume, .additional-picture {
+    text-align: center;
+    width: 45%; /* Each takes up 45% of the row to leave space for two side by side */
+    max-width: 300px; /* Set a maximum width for the container */
+}
+
+.perfume img, .additional-picture img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.result-header {
+    background-color: #d2e4e4;
+}
+
+.perfume-result {
+    background-color: #d2e4e4;
+}
+
+
+/* Optional: Style for notes images */
+.additional-picture img {
+    margin-top: 10px;
+}
