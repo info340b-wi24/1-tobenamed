@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #d2e4e4; /* Light teal color */
+        }
+        nav {
+            background-color: #003d3d; /* Dark teal color */
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        h1 {
+            text-align: center;
+            color: #003d3d; /* Dark teal color */
+            margin-top: 30px;
+        }
+        #searchInput {
+            padding: 8px;
+            width: 300px;
+            margin: 20px auto;
+            display: block;
+            font-size: 16px;
+        }
+        #perfumeList {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .perfume-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .perfume-item {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+        .perfume img {
+            width: 150px;
+            height: auto;
+        }
+        p {
+            color: #003d3d; /* Dark teal color */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="searchpage.html">Search</a></li>
+            <li><a href="quizpage.html">Quiz</a></li>
+            <li><a href="quizresults.html">Quiz Result</a></li>
+            <li><a href="yourlistpage.html">My List</a></li>
+            <li><a href="filterpage.html">Filter Example</a></li>
+            <li><a href="perfumeinfopage.html">Perfume Example</a></li>
+        </ul>
+    </nav>
+
+    <h1>Perfume Search</h1>
+
+    <input type="text" id="searchInput" onkeyup="searchPerfume()" placeholder="Search for a perfume...">
+
+    <div id="perfumeList">
+        <div class="perfume-row">
+            <div class="perfume-item">Black Opium</div>
+            <div class="perfume">
+                <img src="img/blackopium.jpg" alt="Black Opium">
+                <p>Black Opium</p>
+            </div>
+        </div>
+
+        <div class="perfume-row">
+            <div class="perfume-item">Burberry</div>
+            <div class="perfume">
+                <img src="img/burberry.webp" alt="Burberry">
+                <p>Burberry</p>
+            </div>
+        </div>
+
+        <div class="perfume-row">
+            <div class="perfume-item">Kilian</div>
+            <div class="perfume">
+                <img src="img/kilian.jpeg" alt="Kilian">
+                <p>Kilian</p>
+            </div>
+        </div>
+
+        <div class="perfume-row">
+            <div class="perfume-item">Dolce and Gabbana - Light Blue</div>
+            <div class="perfume">
+                <img src="img/lightblue.webp" alt="Dolce and Gabbana - Light Blue">
+                <p>Dolce and Gabbana - Light Blue</p>
+            </div>
+        </div>
+
+        <div class="perfume-row">
+            <div class="perfume-item">Juliette has a Gun</div>
+            <div class="perfume">
+                <img src="img/notaperfume.webp" alt="Juliette Has A Gun">
+                <p>Juliette has a Gun</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchPerfume() {
+            var input, filter, perfumes, item, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            perfumes = document.getElementById('perfumeList').getElementsByClassName('perfume-row');
+
+            for (var i = 0; i < perfumes.length; i++) {
+                item = perfumes[i].getElementsByClassName('perfume-item')[0];
+                txtValue = item.textContent || item.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    perfumes[i].style.display = "";
+                } else {
+                    perfumes[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
