@@ -1,10 +1,17 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #d2e4e4;
 }
 
 h1 {
     text-align: center;
+    background-color: #003d3d;
+    color: white;
+}
+
+p {
+    color: #003d3d;
 }
 
 .perfume-container {
@@ -32,12 +39,13 @@ h1 {
     border-radius: 5px;
 }
 
-.result-header {
-    background-color: #d2e4e4;
+.quizquestion {
+    color: #003d3d;
+    text-align: center;
 }
 
-.perfume-result {
-    background-color: #d2e4e4;
+.perfumeresult {
+    color: #003d3d;
 }
 
 
