@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Filter Perfumes</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="searchpage.html">Search</a></li>
+            <li><a href="quizpage.html">Quiz</a></li>
+            <li><a href="quizresults.html">Quiz Result</a></li>
+            <li><a href="yourlistpage.html">My List</a></li>
+            <li><a href="filterpage.html">Filter Example</a></li>
+            <li><a href="perfumeinfopage.html">Perfume Example</a></li>
+        </ul>
+    </nav>
+
+    <h1>Filter Perfumes</h1>
+
+    <div class="descriptors">
+        <label><input type="checkbox" class="descriptor-checkbox" data-descriptor="floral"> Floral</label>
+        <label><input type="checkbox" class="descriptor-checkbox" data-descriptor="spicy"> Spicy</label>
+        <label><input type="checkbox" class="descriptor-checkbox" data-descriptor="woody"> Woody</label>
+        <label><input type="checkbox" class="descriptor-checkbox" data-descriptor="citrusy"> Citrusy</label>
+    </div>
+
+    <div class="perfume-container">
+        <!-- Perfume 1 -->
+        <div class="perfume-row floral spicy">
+            <div class="perfume">
+                <img src="img/blackopium.jpg" alt="Black Opium">
+            </div>
+        </div>
+
+        <!-- Perfume 2 -->
+        <div class="perfume-row citrusy">
+            <div class="perfume">
+                <img src="img/burberry.webp" alt="Burberry">
+            </div>
+        </div>
+
+        <!-- Perfume 3 -->
+        <div class="perfume-row woody">
+            <div class="perfume">
+                <img src="img/kilian.jpeg" alt="Kilian">
+            </div>
+        </div>
+
+        <!-- Perfume 4 -->
+        <div class="perfume-row floral">
+            <div class="perfume">
+                <img src="img/lightblue.webp" alt="Dolce and Gabbana - Light Blue">
+            </div>
+        </div>
+
+        <!-- Perfume 5 -->
+        <div class="perfume-row spicy woody">
+            <div class="perfume">
+                <img src="img/notaperfume.webp" alt="Juliette Has A Gun">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.descriptor-checkbox').forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                var descriptor = this.dataset.descriptor;
+                var perfumes = document.querySelectorAll('.perfume-row');
+
+                for (var i = 0; i < perfumes.length; i++) {
+                    var perfume = perfumes[i];
+                    if (perfume.classList.contains(descriptor)) {
+                        perfume.style.display = this.checked ? "" : "none";
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
