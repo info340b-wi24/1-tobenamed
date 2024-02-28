@@ -1,147 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfume Search</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Aldijana Sabanovic, Anika Yechuri, Sanmathi Prabakar">
+    <meta name="description" content="This page is the search page">
+    <title>Search Page</title>
+   
+    <link rel="stylesheet" href="css/style.css">
     <style>
+        /* Additional CSS styles for search page */
         body {
-            font-family: Arial, sans-serif;
+            background-color: #FFEFE9; /* Change this to your desired background color */
             margin: 0;
-            background-color: #d2e4e4; /* Light teal color */
+            padding: 0;
         }
         nav {
-            background-color: #003d3d; /* Dark teal color */
-            padding: 20px 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav li {
-            margin: 0 10px;
-        }
-        nav a {
+            background-color: white;
             color: white;
-            text-decoration: none;
+            padding: 20px;
         }
-        h1 {
-            text-align: center;
-            color: #003d3d; /* Dark teal color */
-            margin-top: 30px;
-        }
-        #searchInput {
-            padding: 8px;
-            width: 300px;
-            margin: 20px auto;
-            display: block;
-            font-size: 16px;
-        }
-        #perfumeList {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .perfume-row {
+        .search-container {
+            padding: 20px;
+            background-color: grey;
+            border-radius: 20px;
+            margin-top: 20px;
+            color: white;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
+        }
+        .search-container input[type=text] {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            margin-right: 10px;
+        }
+        .search-container select {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: #FFCAB6;
+            color: white;
+            margin-right: 10px;
+        }
+        .search-container button {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: #FF926A;
+            color: white;
+            cursor: pointer;
+        }
+        .perfume-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
         }
         .perfume-item {
-            display: none;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px; /* Adjust the width as needed */
+            height: 250px; /* Adjust the height as needed */
+        }
+        .perfume-item img {
+            width: 100%;
+            height: 50%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .perfume-details {
             padding: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 5px;
-        }
-        .perfume img {
-            width: 150px;
-            height: auto;
-        }
-        p {
-            color: #003d3d; /* Dark teal color */
             text-align: center;
+        }
+        .perfume-details p {
+            margin: 5px 0;
+            font-size: 12px;
+            line-height: 1.2;
         }
     </style>
 </head>
-<body>
+<body class="home-body">
     <nav>
+        <div class="nav-left">
+            <h1>ScentSeeker</h1>
+        </div>
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="searchpage.html">Search</a></li>
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="quizresults.html">Quiz Result</a></li>
             <li><a href="yourlistpage.html">My List</a></li>
-            <li><a href="filterpage.html">Filter Example</a></li>
-            <li><a href="perfumeinfopage.html">Perfume Example</a></li>
+            <li><a href="filterpage.html">Filter</a></li>
+            <li><a href="perfumeinfopage.html">Perfume</a></li>
         </ul>
     </nav>
-
-    <h1>Perfume Search</h1>
-
-    <input type="text" id="searchInput" onkeyup="searchPerfume()" placeholder="Search for a perfume...">
-
-    <div id="perfumeList">
-        <div class="perfume-row">
-            <div class="perfume-item">Black Opium</div>
-            <div class="perfume">
-                <img src="img/blackopium.jpg" alt="Black Opium">
-                <p>Black Opium</p>
-            </div>
-        </div>
-
-        <div class="perfume-row">
-            <div class="perfume-item">Burberry</div>
-            <div class="perfume">
-                <img src="img/burberry.webp" alt="Burberry">
-                <p>Burberry</p>
-            </div>
-        </div>
-
-        <div class="perfume-row">
-            <div class="perfume-item">Kilian</div>
-            <div class="perfume">
-                <img src="img/kilian.jpeg" alt="Kilian">
-                <p>Kilian</p>
-            </div>
-        </div>
-
-        <div class="perfume-row">
-            <div class="perfume-item">Dolce and Gabbana - Light Blue</div>
-            <div class="perfume">
-                <img src="img/lightblue.webp" alt="Dolce and Gabbana - Light Blue">
-                <p>Dolce and Gabbana - Light Blue</p>
-            </div>
-        </div>
-
-        <div class="perfume-row">
-            <div class="perfume-item">Juliette has a Gun</div>
-            <div class="perfume">
-                <img src="img/notaperfume.webp" alt="Juliette Has A Gun">
-                <p>Juliette has a Gun</p>
-            </div>
-        </div>
+    
+    <div class="search-container">
+        <input type="text" name="search" placeholder="Search">
+        <select name="filter">
+            <option value="all">All</option>
+            <option value="brand">Brand</option>
+            <option value="price">Price</option>
+            <option value="scent">Scent</option>
+        </select>
+        <button type="submit">Search</button>
     </div>
 
-    <script>
-        function searchPerfume() {
-            var input, filter, perfumes, item, txtValue;
-            input = document.getElementById('searchInput');
-            filter = input.value.toUpperCase();
-            perfumes = document.getElementById('perfumeList').getElementsByClassName('perfume-row');
-
-            for (var i = 0; i < perfumes.length; i++) {
-                item = perfumes[i].getElementsByClassName('perfume-item')[0];
-                txtValue = item.textContent || item.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    perfumes[i].style.display = "";
-                } else {
-                    perfumes[i].style.display = "none";
-                }
-            }
-        }
-    </script>
+    <!-- Perfume Catalog -->
+    <h2>Perfume Catalog</h2>
+    <div class="perfume-container">
+        <div class="perfume-item">
+            <img src="kilian.jpg" alt="Kilian perfume">
+            <div class="perfume-details">
+                <h3>Kilian</h3>
+                <p>Love don't be shy</p>
+                <p>Sweet and floral fragrance</p>
+                <p>50ml and 100ml bottles</p>
+                <p>Sweet</p>
+                <p>$$$</p>
+            </div>
+        </div>
+        <!-- Add more perfume items -->
+        <div class="perfume-item">
+            <div class="perfume-details">
+                <h3>YSL</h3>
+                <p>Black Opium</p>
+                <p>Spicy</p>
+                <p>$</p>
+            </div>
+        </div>
+        <div class="perfume-item">
+            <div class="perfume-details">
+                <h3>Dolce & Gabana</h3>
+                <p>Light Blue</p>
+                <p>Citrus</p>
+                <p>$</p>
+            </div>
+        </div>
+        
+        
+    </div>
 </body>
 </html>
