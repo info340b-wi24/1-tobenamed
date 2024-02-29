@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Aldijana Sabanovic, Anika Yechuri, Sanmathi Prabakar">
+    <meta name="description" content="This page is the Musk Therapy Initio page">
+    <title>Musk Therapy Initio</title>
+   
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row {
+          display: flex;
+        }
+        
+        /* Create three equal columns that sits next to each other */
+        .column {
+            flex: 1;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+        }
+
+        .column img {
+            width: 100%; 
+            height: auto; 
+        }
+
+        .add-list-button {
+            background-color: #FF926A;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .perfume-description-box {
+        background-color: #f9f9f9; 
+        padding: 40px;
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        margin-top: 20px; 
+        }
+
+        .perfume-description {
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        h2 {
+        text-align: center;
+        color: #FF926A; /* Set heading color */
+        margin-bottom: 20px; /* Add margin at the bottom for separation */
+        font-size: 34px; /* Adjust font size */
+        }
+
+        .perfumetitle {
+        text-align: center;
+        margin-bottom: 20px; /* Add margin at the bottom for separation */
+        font-size: 44px; /* Adjust font size */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <h1>ScentSeeker</h1>
+        </div>
+        <ul>
+        <li><a href="home.html">Home</a></li>
+          <li><a href="searchpage.html">Search</a></li>
+          <li><a href="quiz.html">Quiz</a></li>  <!--same as quiz page-->
+          <li><a href="yourlistpage.html">My List</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="perfumetitle">Musk Therapy, Initio</h1>
+    
+    <div class="row">
+        <div class="column">
+            <div>
+                <img src="perfumes/musktherapyINITIO.jpg" alt="image of bottle"> 
+            </div>
+        </div>
+        <div class="column">
+            <div>
+                <img src="notes/musktherapy.png" alt="notes of perfume"> 
+            </div>
+        </div>
+    </div>
+
+    <div class="perfume-description-box">
+        <h2>Discover Musk Therapy by Initio</h2>
+        <p>&nbsp</p>
+        <p class="perfume-description">
+            Natural white sandalwood blended with an overdose of white and pink musk come together to create an addictive milky and velvety accord. This fragrance restores peace of mind and returns you to a state of well-being.
+        </p>
+        <p>&nbsp</p>
+        <h2>$390</h2>
+    </div>
+
+    <div>
+        <button class="add-list-button">Save to List</button>
+    </div>
+
+    <p>&nbsp</p>
+
+    
+</body>
+
+</html>
