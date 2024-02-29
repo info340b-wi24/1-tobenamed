@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Aldijana Sabanovic, Anika Yechuri, Sanmathi Prabakar">
-    <meta name="description" content="This page is the search page">
+    <meta name="description" content="This page is the my list page">
     <title>Search Page</title>
    
     <link rel="stylesheet" href="css/style.css">
@@ -13,6 +13,10 @@
             background-color: #FFEFE9; /* Change this to your desired background color */
             margin: 0;
             padding: 0;
+        }
+        .list {
+            color:white;
+            font-size: 44px;
         }
         nav {
             background-color: white;
@@ -34,22 +38,6 @@
             border: none;
             margin-right: 10px;
         }
-        .search-container select {
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-            background-color: #FFCAB6;
-            color: white;
-            margin-right: 10px;
-        }
-        .search-container button {
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-            background-color: #FF926A;
-            color: white;
-            cursor: pointer;
-        }
         .perfume-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -57,17 +45,17 @@
             padding: 20px;
         }
         .perfume-item {
-            background-color: #fff;
+            background-color: #FF926A;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 200px; /* Adjust the width as needed */
             height: 250px; /* Adjust the height as needed */
         }
         .perfume-item img {
-            width: 100%;
-            height: 50%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
         .perfume-details {
             padding: 10px;
@@ -78,6 +66,7 @@
             font-size: 12px;
             line-height: 1.2;
         }
+
     </style>
 </head>
 <body class="home-body">
@@ -89,53 +78,31 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="searchpage.html">Search</a></li>
             <li><a href="quiz.html">Quiz</a></li>
-            <li><a href="quizresults.html">Quiz Result</a></li>
             <li><a href="yourlistpage.html">My List</a></li>
-            <li><a href="filterpage.html">Filter</a></li>
-            <li><a href="perfumeinfopage.html">Perfume</a></li>
         </ul>
     </nav>
     
-    <div class="search-container">
-        <input type="text" name="search" placeholder="Search">
-        <select name="filter">
-            <option value="all">All</option>
-            <option value="brand">Brand</option>
-            <option value="price">Price</option>
-            <option value="scent">Scent</option>
-        </select>
-        <button type="submit">Search</button>
-    </div>
 
     <!-- Perfume Catalog -->
-    <h2>Perfume Catalog</h2>
+    <h2 class="list">Your List</h2>
     <div class="perfume-container">
         <div class="perfume-item">
-            <img src="kilian.jpg" alt="Kilian perfume">
+            <img src="img/kilian.jpeg" alt="Kilian perfume">
             <div class="perfume-details">
                 <h3>Kilian</h3>
-                <p>Love don't be shy</p>
-                <p>Sweet and floral fragrance</p>
-                <p>50ml and 100ml bottles</p>
-                <p>Sweet</p>
-                <p>$$$</p>
             </div>
         </div>
         <!-- Add more perfume items -->
         <div class="perfume-item">
+            <img src="img/blackopium.jpg" alt="black opium perfume">
             <div class="perfume-details">
-                <h3>YSL</h3>
-                <p>Black Opium</p>
-                <p>Spicy</p>
-                <p>$</p>
+                <h3>Black Opium</h3>
             </div>
         </div>
         <div class="perfume-item">
+            <img src="perfumes/lightblue.jpg" alt="light blue perfume">
             <div class="perfume-details">
                 <h3>Dolce & Gabana</h3>
-                <p>Light Blue</p>
-                <p>Citrus</p>
-                <p>$</p>
             </div>
         </div>
         
