@@ -394,7 +394,7 @@ nav {
 .perfume-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 50px;
     padding: 30px;
     max-height: 500px;
 }
@@ -421,12 +421,19 @@ nav {
     line-height: 1.2;
 }
 footer {
-    text-align: center; /* Center-aligns the text within the footer */
+    position: fixed; /* Positions the footer relative to the browser window */
+    bottom: 0; /* Positions the footer at the bottom of the viewport */
+    left: 0; /* Ensures the footer is aligned to the left edge */
+    width: 100%; /* Makes the footer span the entire width of the viewport */
+    background-color: #333; /* Optional: Adds a background color to the footer */
     color: white; /* Sets the text color to white */
+    text-align: center; /* Center-aligns the text within the footer */
+    padding: 0px 0; /* Adds padding to the top and bottom of the footer content */
+    max-height: 100px;
 }
 
 .footer-content {
+    max-width: 500px; /* Adjust the max-width as needed */
     margin: 0 auto; /* Centers the content horizontally */
-    max-width: 600px; /* Adjust the max-width as needed */
 }
 
