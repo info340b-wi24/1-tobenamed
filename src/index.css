@@ -22,10 +22,44 @@ body {
     cursor: pointer; /* Set the cursor to pointer */
 }
 
+
 .answers li button:hover {
     background-color: #000; /* Change background color on hover */
     color: #fff; /* Change text color on hover */
 }
+
+.answers li button:active {
+    background-color: #000; /* Keep background color black when pressed */
+    color: #fff; /* Keep text color white when pressed */
+}
+
+
+.quiz-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+
+.button-link {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 40px;
+   
+  }
+  
+  .button-link:hover {
+    background-color: gray;
+  }
+
 .big-button {
     padding: 30px 10px; /* Increase the padding around the button text */
     font-size: 20px; /* Increase the font size of the button text */
@@ -47,8 +81,9 @@ img {
 
 
 .overlay {
-    position: absolute;
-    top: 50;
+    
+    position: relative;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -98,7 +133,7 @@ nav {
     right: 0;
     width: 800px; /* Adjust the width as needed */
     height: 50vh; /* This will make the box take up the full height of the viewport */
-    background-color: rgba(300, 300, 300, 0.5); /* This will create a see-through effect */
+    background-color: rgba(300, 300, 300, 0.7); /* This will create a see-through effect */
     display: flex; /* This will make the box a flex container */
     flex-direction: column; /* This will stack the elements vertically */
     justify-content: center; /* This will center the content horizontally */
@@ -241,19 +276,19 @@ p {
 
 .brown-box {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 330px); /* Adjust the top position as needed */
     left: 50%;
     transform: translate(-50%, -50%);
+  
     width: 600px; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
-    background-color: rgba(181, 76, 28, 0.8);
+    background-color: rgba(181, 76, 28, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column; /* This will stack the elements vertically */
-}
-
+  }
 .brown-box h2 {
     color: white;
 }
