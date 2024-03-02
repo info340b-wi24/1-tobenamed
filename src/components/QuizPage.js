@@ -59,8 +59,9 @@ export function QuizPage () {
       </section>
 
       <button type="submit" className="big-button">Submit</button>
+      
       <footer>
-        <p>&copy; 2024 Find Your Perfume. All rights reserved.</p>
+      <small> 2024 Find Your Perfume. All rights reserved.</small>
         <small>Designed by Aldi Anika Sanmathi</small>
       </footer>
     </div>
