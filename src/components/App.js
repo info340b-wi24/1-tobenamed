@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import QuizPage from './QuizPage';
 import QuizResultsPage from './QuizResultsPage';
+import SearchPage from './SearchPage';
 import { Link } from 'react-router-dom';
 // import NavBar from './NavBar';
 
@@ -13,6 +14,7 @@ export function App () {
      <Route exact path="/" element={<HomePage />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/quizresults" element={<QuizResultsPage />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
    </Router>
   //  <div>

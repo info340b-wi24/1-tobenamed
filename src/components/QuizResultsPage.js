@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
+import { Link } from 'react-router-dom';
 
 export function QuizResultsPage () {
     return (
@@ -14,7 +15,8 @@ export function QuizResultsPage () {
         <h2>FRUITY</h2>
 
         <div class="button-container">
-        <button>See More Perfumes</button>
+        <Link to="/search" className="start-journey-button">See More Perfumes</Link>
+        
     </div>
     </div>
 
