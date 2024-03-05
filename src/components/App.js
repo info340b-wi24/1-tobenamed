@@ -2,31 +2,19 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import QuizPage from './QuizPage';
-<<<<<<< HEAD
-import SearchBar from './SearchBar';
-=======
 import QuizResultsPage from './QuizResultsPage';
 import SearchPage from './SearchPage';
 import { Link } from 'react-router-dom';
 // import NavBar from './NavBar';
->>>>>>> fa1e43d4d5042ca635cdeb3f9e85c5c7f67dab96
 
 export function App () {
   return (
     <Router>
-<<<<<<< HEAD
       <Routes>
         <Route exact path="/" component={HomePage} />
         <Route path="/quiz" component={QuizPage} />
         <Route path="/searchBar" component={SearchBar} /> {/* Add route for SearchPage */}
 
-=======
-     <Routes>
-     <Route exact path="/" element={<HomePage />} />
-        <Route path="/quiz" element={<QuizPage />} />
-        <Route path="/quizresults" element={<QuizResultsPage />} />
-        <Route path="/search" element={<SearchPage />} />
->>>>>>> fa1e43d4d5042ca635cdeb3f9e85c5c7f67dab96
       </Routes>
    </Router>
   //  <div>
