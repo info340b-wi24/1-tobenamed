@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function NavBar () {
   return (
@@ -7,16 +7,17 @@ export function NavBar () {
         <h1>ScentSeeker</h1>
       </div>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="searchpage.html">Search</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="quizresults.html">Quiz Result</a></li>
-        <li><a href="yourlistpage.html">My List</a></li>
-        <li><a href="filterpage.html">Filter</a></li>
-        <li><a href="perfumeinfopage.html">Perfume</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/quiz">Quiz</Link></li>
+        <li><Link to="/quizresults">Quiz Result</Link></li>
+        <li><Link to="/search">Search</Link></li>
+        <li><Link to="/yourlist">My List</Link></li>
+        <li><Link to="/filter">Filter</Link></li>
+       
       </ul>
     </nav>
   );
 };
 
 export default NavBar;
+

@@ -1,6 +1,7 @@
 // QuizPage.js
 import React from 'react';
 import NavBar from './NavBar';
+import { Link } from 'react-router-dom';
 
 export function QuizPage () {
   return (
@@ -58,9 +59,11 @@ export function QuizPage () {
         </ul>
       </section>
 
-      <button type="submit" className="big-button">Submit</button>
+      <Link to="/quizresults" className="button-link">Submit</Link>
+      
+      
       <footer>
-        <p>&copy; 2024 Find Your Perfume. All rights reserved.</p>
+      <small> 2024 Find Your Perfume. All rights reserved.</small>
         <small>Designed by Aldi Anika Sanmathi</small>
       </footer>
     </div>

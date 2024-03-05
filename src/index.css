@@ -1,7 +1,9 @@
 body {
     font-family: 'Times New Roman', Times, serif, sans-serif;
-    margin: 20px;
-    background-color: #ff9d60;
+    position: relative; /* Add this line */
+    background-image: url('../src/data/img/home\ page\ pic.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,48 +22,54 @@ body {
     cursor: pointer; /* Set the cursor to pointer */
 }
 
+
 .answers li button:hover {
     background-color: #000; /* Change background color on hover */
     color: #fff; /* Change text color on hover */
 }
+
+.answers li button:active {
+    background-color: #000; /* Keep background color black when pressed */
+    color: #fff; /* Keep text color white when pressed */
+}
+
+
+.quiz-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+
+.button-link {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 40px;
+   
+  }
+  
+  .button-link:hover {
+    background-color: gray;
+  }
+
 .big-button {
-    padding: 15px 30px; /* Increase the padding around the button text */
+    padding: 30px 10px; /* Increase the padding around the button text */
     font-size: 20px; /* Increase the font size of the button text */
 }
-.home-body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    margin: 20px;
-    background-image: url('../src/data/img/home\ page\ pic.png');
-    background-size: cover;
-    background-position: center;;
-    display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-}
+
 
 .quizheader {
     color: white;
 }
-.quiz-body {
-    position: relative; /* Add this line */
-    background-image: url('../src/data/img/home\ page\ pic.png');
-    background-size: cover;
-    background-position: center;
-}
 
-.quiz-body::before {
-    content: '';
-    position: absolute;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
-    z-index: -1;
-}
 
 img {
     max-width: 300px;
@@ -69,16 +77,13 @@ img {
     margin-top: 10px;
   }
 
-.background-image {
-    max-width: none; /* Override max-width */
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
-}
+
+
 
 .overlay {
-    position: absolute;
-    top: 50;
+    
+    position: relative;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -118,17 +123,17 @@ nav {
     background-color: white;
     padding: 0px 0;
     float: right;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 
 .right-box {
-    position: absolute;
+    position: relative;
     top: 200px;
     right: 0;
     width: 800px; /* Adjust the width as needed */
     height: 50vh; /* This will make the box take up the full height of the viewport */
-    background-color: rgba(300, 300, 300, 0.5); /* This will create a see-through effect */
+    background-color: rgba(300, 300, 300, 0.7); /* This will create a see-through effect */
     display: flex; /* This will make the box a flex container */
     flex-direction: column; /* This will stack the elements vertically */
     justify-content: center; /* This will center the content horizontally */
@@ -271,19 +276,19 @@ p {
 
 .brown-box {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 330px); /* Adjust the top position as needed */
     left: 50%;
     transform: translate(-50%, -50%);
+  
     width: 600px; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
-    background-color: rgba(181, 76, 28, 0.8);
+    background-color: rgba(181, 76, 28, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column; /* This will stack the elements vertically */
-}
-
+  }
 .brown-box h2 {
     color: white;
 }
@@ -298,4 +303,84 @@ p {
     cursor: pointer;
 }
 /* Additional CSS styles for search page */
+
+.search-container {
+    padding: 20px;
+    background-color: rgb(215, 208, 208);
+    border-radius: 20px;
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.search-container input[type=text] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10px;
+}
+.search-container select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e5bfb2;
+    color: white;
+    margin-right: 10px;
+    
+}
+.search-container button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FF926A;
+    color: white;
+    cursor: pointer;
+}
+.perfume-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    padding: 30px;
+    max-height: 500px;
+}
+.perfume-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Adjust the width as needed */
+    height: 370px; /* Adjust the height as needed */
+}
+
+.perfume-item img {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.perfume-details {
+    padding: 10px;
+    text-align: center;
+}
+.perfume-details p {
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+footer {
+    position: fixed; /* Positions the footer relative to the browser window */
+    bottom: 0; /* Positions the footer at the bottom of the viewport */
+    left: 0; /* Ensures the footer is aligned to the left edge */
+    width: 100%; /* Makes the footer span the entire width of the viewport */
+    background-color: #333; /* Optional: Adds a background color to the footer */
+    color: white; /* Sets the text color to white */
+    text-align: center; /* Center-aligns the text within the footer */
+    padding: 0px 0; /* Adds padding to the top and bottom of the footer content */
+    max-height: 100px;
+}
+
+.footer-content {
+    max-width: 500px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Centers the content horizontally */
+}
 
