@@ -6,15 +6,8 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
     "bootstrap": "^5.3.3",
     "popper.js": "^1.16.1",
-=======
-    "a": "^3.0.1",
-    "breaking": "^0.1.2",
-    "change": "^0.0.0",
-    "is": "^3.3.0",
->>>>>>> e892624c570ec3eb99122bcc5667ef646ee43d76
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
