@@ -4,7 +4,7 @@ import HomePage from './HomePage';
 import QuizPage from './QuizPage';
 import QuizResultsPage from './QuizResultsPage';
 import SearchPage from './SearchPage';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import NavBar from './NavBar';
 
 export function App () {

@@ -1,23 +1,23 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function NavBar () {
+export function NavBar() {
   return (
-    <nav>
-      <div className="nav-left">
-        <h1>ScentSeeker</h1>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to="/">Scent Seeker</Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="navbar-nav">
+          {/* <Link className="nav-item nav-link" to="/home">Home</Link> */}
+          <Link className="nav-item nav-link" to="/search">Search</Link>
+          <Link className="nav-item nav-link" to="/quiz">Quiz</Link>
+          <Link className="nav-item nav-link" to="/my-list">My List</Link>
+        </div>
       </div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/quiz">Quiz</Link></li>
-        <li><Link to="/quizresults">Quiz Result</Link></li>
-        <li><Link to="/search">Search</Link></li>
-        <li><Link to="/yourlist">My List</Link></li>
-        <li><Link to="/filter">Filter</Link></li>
-       
-      </ul>
     </nav>
   );
-};
+}
 
 export default NavBar;
-
