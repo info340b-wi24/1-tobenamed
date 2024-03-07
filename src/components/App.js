@@ -4,17 +4,17 @@ import HomePage from './HomePage';
 import QuizPage from './QuizPage';
 import QuizResultsPage from './QuizResultsPage';
 import SearchPage from './SearchPage';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import NavBar from './NavBar';
 
 export function App () {
   return (
     <Router>
-      <Routes>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/quiz" component={QuizPage} />
-        <Route path="/searchBar" component={SearchBar} /> {/* Add route for SearchPage */}
-
+     <Routes>
+     <Route exact path="/" element={<HomePage />} />
+        <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/quizresults" element={<QuizResultsPage />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
    </Router>
   //  <div>

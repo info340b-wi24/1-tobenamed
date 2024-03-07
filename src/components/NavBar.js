@@ -1,23 +1,21 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
 
-export function NavBar () {
+export function NavBar() {
   return (
-    <nav>
-      <div className="nav-left">
-        <h1>ScentSeeker</h1>
-      </div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/quiz">Quiz</Link></li>
-        <li><Link to="/quizresults">Quiz Result</Link></li>
-        <li><Link to="/search">Search</Link></li>
-        <li><Link to="/yourlist">My List</Link></li>
-        <li><Link to="/filter">Filter</Link></li>
-       
-      </ul>
-    </nav>
+    <Navbar bg="light" expand="lg">
+      <Link className="navbar-brand" to="/">Scent Seeker</Link>
+      <Navbar.Toggle aria-controls="navbarNavAltMarkup" />
+      <Navbar.Collapse id="navbarNavAltMarkup">
+        <Nav className="ml-auto">
+          <Link className="nav-link" to="/search">Search</Link>
+          <Link className="nav-link" to="/quiz">Quiz</Link>
+          <Link className="nav-link" to="/my-list">My List</Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
-};
+}
 
 export default NavBar;
-
