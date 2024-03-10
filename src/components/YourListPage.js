@@ -1,12 +1,17 @@
 import React from 'react';
-import NavBar from './NavBar';
 
-const YourListPage = () => {
+const YourListPage = ({ savedPerfumes }) => {
   return (
-    <div className="home-body">
-      <NavBar />
-      {/* Perfume Catalog */}
-      <h1>Your List</h1>
+    <div className="yourlist-page-container">
+      <h1 className="yourlist-heading">Your List</h1>
+
+      <div className="yourlist-content-container">
+        <ul className="yourlist">
+          {savedPerfumes.map((perfume, index) => (
+            <li key={index}>{perfume}</li>
+          ))}
+        </ul>
+      </div>
 
       <footer>
         <div className="footer-content">

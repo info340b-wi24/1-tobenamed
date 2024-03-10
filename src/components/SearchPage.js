@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from './NavBar';
 import Perfumeimages from './imagePaths';
 
 const perfumes = [
             {
-                id: "lovedontbeshy",
                 name: "Kilian",
                 image: Perfumeimages.killian,
                 brand: "Kilian",
@@ -13,7 +11,6 @@ const perfumes = [
                 price: "$$$"
             },
             {
-                id:"blackopium",
                 name: "YSL Black Opium",
                 image: Perfumeimages.blackOpium,
                 brand: "YSL",
@@ -21,7 +18,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"lightblue",
                 name: "Dolce & Gabana Light Blue",
                 image: Perfumeimages.lightBlue,
                 brand: "Dolce & Gabana",
@@ -29,7 +25,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"notaperfume",
                 name: "Juliette has a Gun",
                 image: Perfumeimages.julietteHasAGun,
                 brand: "Juliette has a Gun",
@@ -37,7 +32,6 @@ const perfumes = [
                 price: "$$"
             },
             {
-                id:"her",
                 name: "Burberry",
                 image: Perfumeimages.burberryHer,
                 brand: "Burberry",
@@ -45,7 +39,6 @@ const perfumes = [
                 price: "$$"
             },
             {
-                id:"bythefireplace",
                 name: "Maison Margiela (REPLICA)",
                 image: Perfumeimages.fireplace,
                 brand: "Maison Margiela (REPLICA)",
@@ -53,7 +46,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"goodgirl",
                 name: "Carolina Herrera",
                 image: Perfumeimages.carolineHerrera,
                 brand: "Carolina Herrera",
@@ -61,7 +53,6 @@ const perfumes = [
                 price: "$$"
             },
             {
-                id:"delina",
                 name: "Parfums de Marly",
                 image: Perfumeimages.deMarly,
                 brand: "Parfums de Marly",
@@ -69,7 +60,6 @@ const perfumes = [
                 price: "$$$"
             },
             {
-                id:"amaziggrace",
                 name: "Philosophy",
                 image: Perfumeimages.Philosophy,
                 brand: "Philosophy",
@@ -77,7 +67,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"rosie",
                 name: "By / Rosie Jane",
                 image: Perfumeimages.RosieJane,
                 brand: "By / Rosie Jane",
@@ -85,7 +74,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id: "whispersinlib",
                 name: "Maison Margiela (REPLICA)",
                 image: Perfumeimages.whispersInTheLibrary,
                 brand: "Maison Margiela (REPLICA)",
@@ -93,7 +81,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"woodysandal",
                 name: "Dossier",
                 image: Perfumeimages.woodysandal,
                 brand: "Dossier",
@@ -101,7 +88,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"musktherapy",
                 name: "Initio",
                 image: Perfumeimages.musktherapy,
                 brand: "Initio",
@@ -109,7 +95,6 @@ const perfumes = [
                 price: "$$$"
             },
             {
-                id:"gourmandwhiteflowers",
                 name: "Dossier",
                 image: Perfumeimages.gourmandwhiteflowers,
                 brand: "Dossier",
@@ -117,7 +102,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"gourmandaddict",
                 name: "Zara",
                 image: Perfumeimages.gourmandaddict,
                 brand: "Zara",
@@ -125,7 +109,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"fruitysherbert",
                 name: "Bath & Body Works",
                 image: Perfumeimages.fruitysherbert,
                 brand: "Bath & Body Works",
@@ -133,7 +116,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"sweettooth",
                 name: "Sabrina Carpenter",
                 image: Perfumeimages.sweettooth,
                 brand: "Sabrina Carpenter",
@@ -141,7 +123,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"blackorchid",
                 name: "Tom Ford",
                 image: Perfumeimages.blackOrchid,
                 brand: "Tom Ford",
@@ -149,7 +130,6 @@ const perfumes = [
                 price: "$$$"
             },
             {
-                id:"monparis",
                 name: "YSL",
                 image: Perfumeimages.monParis,
                 brand: "YSL",
@@ -157,7 +137,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"amberyvanilla",
                 name: "Dossier",
                 image: Perfumeimages.amberyVanilla,
                 brand: "Dossier",
@@ -165,15 +144,13 @@ const perfumes = [
                 price: "$"
             },
             {
-                id:"chaiepice",
-                name: "Chai Epice",
+                name: "Le Monde",
                 image: Perfumeimages.chai,
                 brand: "Le Monde",
                 scent: "Gourmand",
                 price: "$"
             },
             {
-                id:"cliniquehappy",
                 name: "Clinque",
                 image: Perfumeimages.happy,
                 brand: "Clinque",
@@ -181,7 +158,6 @@ const perfumes = [
                 price: "$"
             },
             {
-                id: "imamusk",
                 name: "Fine'ry",
                 image: Perfumeimages.finery,
                 brand: "Fine'ry",
@@ -224,7 +200,6 @@ export function SearchPage() {
   
     return (
       <div>
-        <NavBar />
   
         <div className="filter-container">
           <form onSubmit={handleFormSubmit}>

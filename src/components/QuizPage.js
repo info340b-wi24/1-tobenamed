@@ -1,12 +1,10 @@
 // QuizPage.js
 import React from 'react';
-import NavBar from './NavBar';
 import { Link } from 'react-router-dom';
 
 export function QuizPage () {
   return (
     <div className="quiz-body">
-       <NavBar />
       <header>
         <h1 className="quizheader">Tell us about yourself...</h1>
       </header>
