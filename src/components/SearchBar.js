@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 
 const SearchBar = ({ perfumes }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterType, setFilterType] = useState('all');
-
+  const [filterType, setFilterType] = useState('Brand');
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
   };

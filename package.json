@@ -6,8 +6,11 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "a": "^3.0.1",
     "bootstrap": "^5.3.3",
-    "popper.js": "^1.16.1",
+    "breaking": "^0.1.2",
+    "change": "^0.0.0",
+    "is": "^3.3.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
@@ -38,12 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
-      
-=======
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.1"
->>>>>>> 72ff54c21fe9307fcada94904a922bacbcd8b95b
   }
 }
