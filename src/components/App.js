@@ -4,6 +4,8 @@ import HomePage from './HomePage';
 import QuizPage from './QuizPage';
 import QuizResultsPage from './QuizResultsPage';
 import SearchPage from './SearchPage';
+import YourListPage from './YourListPage';
+import AmazingGrace from './perfume/AmazingGrace';
 // import { Link } from 'react-router-dom';
 // import NavBar from './NavBar';
 
@@ -15,6 +17,8 @@ export function App () {
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/quizresults" element={<QuizResultsPage />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/YourListPage" element={<YourListPage />}/>
+        <Route path="/perfume/9" element={<AmazingGrace />}/>
       </Routes>
    </Router>
   //  <div>
