@@ -2,7 +2,7 @@ import React from 'react';
 import AmazingGraceNotes from '../../data/perfumes/magnoliaamazinggracePHILOSOPHY.jpg';
 import AmazingGraceBottle from '../../data/notes/amazingrace.png';
 
-const AmazingGracePage = ({ perfumeName, setSavedPerfumes }) => {
+const AmazingGraceMagnoliaPage = ({ perfumeName, setSavedPerfumes }) => {
   const [isSaved, setIsSaved] = React.useState(false);
 
   const handleSaveToList = () => {
@@ -11,15 +11,16 @@ const AmazingGracePage = ({ perfumeName, setSavedPerfumes }) => {
   };
 
   return (
-    <div className="amazing-grace-container">
+    <div className="perfume-page-container">
       <h1 className="perfume-title">{perfumeName}</h1>
 
       <div className="image-container">
-        <div className="column">
-          <img className="bottle-image" src={AmazingGraceBottle} alt="Amazing Grace Perfume Bottle" />
-        </div>
-        <div className="column">
+        <div className="perfume-column">
           <img className="notes-image" src={AmazingGraceNotes} alt="Notes of amazing grace perfume" />
+        </div>
+
+        <div className="perfume-column">
+          <img className="bottle-image" src={AmazingGraceBottle} alt="Amazing Grace Perfume Bottle" />
         </div>
       </div>
 
@@ -40,6 +41,4 @@ const AmazingGracePage = ({ perfumeName, setSavedPerfumes }) => {
   );
 };
 
-export default AmazingGracePage;
-
-
+export default AmazingGraceMagnoliaPage;

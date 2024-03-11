@@ -237,19 +237,43 @@ p {
     background-color: #E0704E;
 }
 
-.amazing-grace-container {
+.perfume-column {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+}
+  
+.pefume-column img {
+    width: 100%;
+    height: auto;
+}
+
+.perfume-page-container {
     text-align: center;
     padding: 20px;
 }
 
-.bottle-image,
+.bottle-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
 .notes-image {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
 .bottle-image:hover,

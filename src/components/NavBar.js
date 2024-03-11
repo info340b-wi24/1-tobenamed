@@ -12,7 +12,7 @@ export function NavBar() {
           <Nav className="ml-auto">
             <Link className="nav-link" to="/search">Search</Link>
             <Link className="nav-link" to="/quiz">Quiz</Link>
-            <Link className="nav-link" to="/YourListPage">My List</Link>
+            <Link className="nav-link" to="/YourListPage">Your List</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
