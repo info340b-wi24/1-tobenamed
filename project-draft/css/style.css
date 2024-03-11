@@ -365,6 +365,8 @@ nav {
     color: white;
     display: flex;
     align-items: center;
+    max-width: 500px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Centers the content horizontally */
 }
 .search-container input[type=text] {
     padding: 10px;
@@ -434,4 +436,56 @@ footer {
     max-width: 500px; /* Adjust the max-width as needed */
     margin: 0 auto; /* Centers the content horizontally */
 }
-
+.search-page-container {
+    max-width: 500px; /* Adjust the max-width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Adjust as needed */
+    margin-right: 250px;
+    margin: 0 auto; /* Centers the content horizontally */
+  }
+  
+  .filter-container {
+    margin-bottom: 20px;
+    margin-right: 250px;
+    margin: 0 auto; /* Centers the content horizontally */
+  }
+  
+  .filter-form {
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Centers the content horizontally */
+  }
+  
+  .search-input{
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 250px; /* Adjust the gap between elements */
+  }
+  .filter-select{
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 250px; /* Adjust the gap between elements */
+  }
+  .search-button {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 250px; /* Adjust the gap between elements */
+  }
+  
+  .perfume-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .perfume-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .perfume-details {
+    padding: 10px;
+  }

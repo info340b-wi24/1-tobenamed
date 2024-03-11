@@ -170,80 +170,155 @@ export function SearchPage() {
     const [searchInput, setSearchInput] = useState('');
     const [filteredPerfumes, setFilteredPerfumes] = useState(perfumes);
     const [selectedFilter, setSelectedFilter] = useState('all');
-  
+    const [selectedPrice, setSelectedPrice] = useState([]);
+    const [selectedBrand, setSelectedBrand] = useState([]);
+    const [selectedScent, setSelectedScent] = useState([]);
+
     const handleSearchInputChange = (e) => {
-      setSearchInput(e.target.value);
+        setSearchInput(e.target.value);
     };
-  
+
     const handleFilterChange = (e) => {
-      setSelectedFilter(e.target.value);
+        setSelectedFilter(e.target.value);
     };
-  
+
+    const handlePriceCheckboxChange = (e) => {
+        const value = e.target.value;
+        if (selectedPrice.includes(value)) {
+            setSelectedPrice(selectedPrice.filter(item => item !== value));
+        } else {
+            setSelectedPrice([...selectedPrice, value]);
+        }
+    };
+
+    const handleBrandCheckboxChange = (e) => {
+        const value = e.target.value;
+        if (selectedBrand.includes(value)) {
+            setSelectedBrand(selectedBrand.filter(item => item !== value));
+        } else {
+            setSelectedBrand([...selectedBrand, value]);
+        }
+    };
+
+    const handleScentCheckboxChange = (e) => {
+        const value = e.target.value;
+        if (selectedScent.includes(value)) {
+            setSelectedScent(selectedScent.filter(item => item !== value));
+        } else {
+            setSelectedScent([...selectedScent, value]);
+        }
+    };
+
     const filterPerfumes = () => {
-      let filtered = perfumes;
-      if (selectedFilter !== 'all' && searchInput.trim() !== '') {
-        filtered = perfumes.filter(perfume => {
-          if (selectedFilter === 'Price') {
-            return perfume[selectedFilter].toLowerCase().includes(searchInput.toLowerCase());
-          } else {
-            return perfume[selectedFilter].toLowerCase() === searchInput.toLowerCase();
-          }
-        });
-      }
-      return filtered;
+        let filtered = perfumes;
+        if (selectedFilter !== 'all' && searchInput.trim() !== '') {
+            filtered = perfumes.filter(perfume => {
+                const isMatch = selectedFilter === 'Price'
+                    ? selectedPrice.includes(perfume[selectedFilter])
+                    : selectedFilter === 'Brand'
+                        ? selectedBrand.includes(perfume[selectedFilter])
+                        : selectedScent.includes(perfume[selectedFilter]);
+                return isMatch && (
+                    perfume[selectedFilter].toLowerCase().includes(searchInput.toLowerCase()) ||
+                    perfume.name.toLowerCase().includes(searchInput.toLowerCase())
+                );
+            });
+        }
+        return filtered;
     };
-  
+
     const handleFormSubmit = (e) => {
-      e.preventDefault();
-      setFilteredPerfumes(filterPerfumes());
+        e.preventDefault();
+        setFilteredPerfumes(filterPerfumes());
     };
-  
+
     return (
-      <div>
-  
-        <div className="filter-container">
-          <form onSubmit={handleFormSubmit}>
-            <input
-              type="text"
-              name="search"
-              placeholder="Search"
-              value={searchInput}
-              onChange={handleSearchInputChange}
-            />
-            <select name="filter" value={selectedFilter} onChange={handleFilterChange}>
-              <option value="all">All</option>
-              <option value="brand">Brand</option>
-              <option value="scent">Scent</option>
-              <option value="price">Price</option>
-            </select>
-            <button type="submit">Search</button>
-          </form>
-        </div>
-  
-        <div className="perfume-container">
-          {filteredPerfumes.map((perfume, index) => (
-              <Link to={`/perfume/${index + 1}`} className="perfume-link">
-              <div className="perfume-item">
-                <div className="perfume-details">
-                  <img src={perfume.image} alt={perfume.name} />
-                  <h5>{perfume.brand}</h5>
-                  <p>{perfume.name}</p>
-                  <p>{perfume.scent}</p>
-                  <p>{perfume.price}</p>
+        <div className="search-page-container">
+            <div className="filter-container">
+                <form onSubmit={handleFormSubmit} className="filter-form">
+                    <input
+                        type="text"
+                        name="search"
+                        placeholder="Search"
+                        value={searchInput}
+                        onChange={handleSearchInputChange}
+                        className="search-input"
+                    />
+                    <div className="filter-radio">
+                        {/* Price filter checkboxes */}
+                        <div className="checkbox-section">
+                            <b>Price:</b>
+                            {['$', '$$', '$$$'].map(price => (
+                                <label key={price}>
+                                    <input
+                                        type="checkbox"
+                                        value={price}
+                                        checked={selectedPrice.includes(price)}
+                                        onChange={handlePriceCheckboxChange}
+                                    />
+                                    {price}
+                                </label>
+                            ))}
+                        </div>
+                        {/* Brand filter checkboxes */}
+                        <div className="checkbox-section">
+                            <b>Brand:</b>
+                            {['Dolce & Gabana', 'Burberry', 'Dossier'].map(brand => (
+                                <label key={brand}>
+                                    <input
+                                        type="checkbox"
+                                        value={brand}
+                                        checked={selectedBrand.includes(brand)}
+                                        onChange={handleBrandCheckboxChange}
+                                    />
+                                    {brand}
+                                </label>
+                            ))}
+                        </div>
+                        {/* Scent filter checkboxes */}
+                        <div className="checkbox-section">
+                            <b>Scent:</b>
+                            {['Woody', 'Spicy', 'Musk'].map(scent => (
+                                <label key={scent}>
+                                    <input
+                                        type="checkbox"
+                                        value={scent}
+                                        checked={selectedScent.includes(scent)}
+                                        onChange={handleScentCheckboxChange}
+                                    />
+                                    {scent}
+                                </label>
+                            ))}
+                        </div>
+                    </div>
+                    <button type="submit" className="search-button">Search</button>
+                </form>
+            </div>
+
+            <div className="perfume-container">
+                {filteredPerfumes.map((perfume, index) => (
+                    <Link to={`/perfume/${index + 1}`} className="perfume-link" key={index}>
+                        <div className="perfume-item">
+                            <div className="perfume-details">
+                                <img src={perfume.image} alt={perfume.name} />
+                                <h5>{perfume.brand}</h5>
+                                <p>{perfume.name}</p>
+                                <p>{perfume.scent}</p>
+                                <p>{perfume.price}</p>
+                            </div>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+
+            <footer>
+                <div className="footer-content">
+                    <small>2024 Find Your Perfume. All rights reserved.</small>
+                    <small>Designed by Aldi Anika Sanmathi</small>
                 </div>
-              </div>
-            </Link>
-          ))}
+            </footer>
         </div>
-  
-        <footer>
-          <div className="footer-content">
-            <small> 2024 Find Your Perfume. All rights reserved.</small>
-            <small>Designed by Aldi Anika Sanmathi</small>
-          </div>
-        </footer>
-      </div>
     );
-  }
-  
+}
+
 export default SearchPage;

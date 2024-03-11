@@ -4,8 +4,8 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export function NavBar() {
   return (
-    <Navbar bg="light" expand="lg" style={{ padding: '10px 0', marginBottom: '20px' }} fluid>
-      <Container fluid>
+    <Navbar bg="#E07EC0" expand="lg" style={{ padding: '10px 0', marginBottom: '20px' }} >
+      <Container>
         <Link className="navbar-brand" to="/">Scent Seeker</Link>
         <Navbar.Toggle aria-controls="navbarNavAltMarkup" />
         <Navbar.Collapse id="navbarNavAltMarkup">

@@ -122,7 +122,7 @@ nav {
     width: 100%;
     max-width: 1200px; /* Adjust this value based on your preference */
     margin: 0 auto; /* Center the navbar horizontally */
-    background-color: white;
+    background-color: rgb(236, 135, 135);
     padding: 20px 0;
     margin-top: 20px;
     position: fixed;
@@ -445,6 +445,50 @@ p {
     text-decoration: none;
     color: rgba(181, 76, 28, 0.9);
 }
+  
+  .filter-container {
+    margin-bottom: 20px;
+    margin-right: 250px;
+    margin: 0 auto; /* Centers the content horizontally */
+  }
+  
+  .filter-form {
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Centers the content horizontally */
+  }
+
+    .filter-radio {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Adjust the gap between radio buttons and labels */
+    }
+    
+    .radio-label {
+        display: flex;
+        align-items: center;
+    }
+    
+    .radio-span {
+        margin-left: 8px; /* Adjust the space between the radio button and label */
+    }
+    
+  .search-input{
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 25px; /* Adjust the gap between elements */
+  }
+  .filter-select{
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 25px; /* Adjust the gap between elements */
+  }
+  .search-button {
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 25px; /* Adjust the gap between elements */
+    font-weight: bold; /* Set the font weight to bold */
+  }
 
 /* your list css */
 .yourlist-page-container {
