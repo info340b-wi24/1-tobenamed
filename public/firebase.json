@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "socialcheduling-1",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -1,0 +1,632 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    position: relative;
+    /* Add this line */
+    background-image: url('../src/data/img/home\ page\ pic.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+
+
+.answers li button {
+    border-radius: 50%;
+    /* Make the button circular */
+    width: 10px;
+    /* Set the width of the button */
+    height: 10px;
+    /* Set the height of the button */
+    padding: 0;
+    /* Remove padding */
+    margin: 5px;
+    /* Add margin for spacing */
+    background-color: #fff;
+    /* Set the background color */
+    border: 2px solid #000;
+    /* Set the border */
+    cursor: pointer;
+    /* Set the cursor to pointer */
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+.answers li button:active {
+    background-color: #000;
+    /* Change background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+}
+
+.answers li button:active {
+    background-color: #000;
+    /* Change background color when pressed */
+    color: #fff;
+    /* Change text color when pressed */
+}
+
+.answers li button:active {
+    background-color: #000;
+    /* Keep background color black when pressed */
+    color: #fff;
+    /* Keep text color white when pressed */
+}
+
+
+.quiz-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.button-link {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 40px;
+
+}
+
+.button-link:hover {
+    background-color: gray;
+}
+
+.big-button {
+    padding: 30px 10px;
+    /* Increase the padding around the button text */
+    font-size: 20px;
+    /* Increase the font size of the button text */
+}
+
+
+.quizheader {
+    color: white;
+}
+
+
+img {
+    max-width: 300px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+
+.overlay {
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the alpha value to change the transparency */
+}
+
+.fullq {
+    text-align: center;
+    min-width: 570px;
+    /* Set the minimum width */
+    min-height: 130px;
+    /* Set the minimum height */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: rgba(246, 230, 219, 0.89);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.perfume-box {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    max-width: 1200px;
+    /* Adjust this value based on your preference */
+    margin: 0 auto;
+    /* Center the navbar horizontally */
+    background-color: #FF926A;
+    padding: 20px 0;
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+    /* Adjust this property as needed */
+}
+
+.navbar-nav .nav-link {
+    margin-right: 20px;
+    /* Adjust this property as needed */
+}
+
+
+.right-box {
+    position: relative;
+    top: 200px;
+    right: 0;
+    width: 800px;
+    /* Adjust the width as needed */
+    height: 50vh;
+    /* This will make the box take up the full height of the viewport */
+    background-color: rgba(300, 300, 300, 0.7);
+    /* This will create a see-through effect */
+    display: flex;
+    /* This will make the box a flex container */
+    flex-direction: column;
+    /* This will stack the elements vertically */
+    justify-content: center;
+    /* This will center the content horizontally */
+    align-items: center;
+    /* This will center the content vertically */
+}
+
+.start-journey-button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+    padding: 10px 0;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+    padding: 0px 0;
+}
+
+.imgperf {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+p {
+    color: #003d3d;
+}
+
+.descriptors {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.descriptors label {
+    margin-right: 10px;
+}
+
+.perfume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfume-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.perfume,
+.additional-picture {
+    text-align: center;
+    width: 45%;
+    max-width: 300px;
+}
+
+.perfume img,
+.additional-picture img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* additional css for search cards & perfume pages */
+.add-list-button {
+    padding: 12px 24px;
+    background-color: #FF926A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-list-button:hover {
+    background-color: #E0704E;
+}
+
+.perfume-column {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Center items vertically */
+}
+
+.pefume-column img {
+    width: 100%;
+    height: auto;
+}
+
+.perfume-page-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.bottle-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.notes-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bottle-image:hover,
+.notes-image:hover {
+    transform: scale(1.1);
+}
+
+.perfume-title {
+    font-size: 28px;
+    color: #FF926A;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* Adjust the border-radius for the bubble effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Add a subtle box-shadow for depth */
+    display: inline-block;
+    /* Ensure the bubble only takes the necessary width */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.perfume-description-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.perfume-description {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.perfume-price {
+    color: #FF926A;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.quizquestion h2 {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+}
+
+.fullq {
+    font-size: 14px;
+    /* Change the value as needed */
+}
+
+.answers li {
+    font-size: 18px;
+    /* Change the value as needed */
+}
+
+.perfumeresult {
+    color: #003d3d;
+}
+
+
+.additional-picture img {
+    margin-top: 10px;
+}
+
+
+.brown-box {
+    position: absolute;
+    top: calc(50% + 330px);
+    /* Adjust the top position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 600px;
+    /* Adjust the width as needed */
+    height: 300px;
+    /* Adjust the height as needed */
+    background-color: rgba(181, 76, 28, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    /* This will stack the elements vertically */
+}
+
+.brown-box h2 {
+    color: white;
+}
+
+.button-container button {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Additional CSS styles for search page */
+.checkbox-section {
+    margin-bottom: 5px;
+    color: #E0704E;
+}
+
+.search-container {
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-top: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.search-container select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: black;
+    margin-right: 10px;
+    display: inline-block;
+
+}
+
+.search-container button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FF926A;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.perfume-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    padding: 30px;
+    max-height: 500px;
+}
+
+.perfume-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* Adjust the width as needed */
+    height: 400px;
+    /* Adjust the height as needed */
+}
+
+.perfume-item img {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.perfume-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.perfume-details p {
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.perfume-link {
+    text-decoration: none;
+    color: rgba(181, 76, 28, 0.9);
+}
+
+.filter-container {
+    margin-bottom: 20px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+}
+
+
+.filter-form {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.filter-radio {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+}
+
+.radio-span {
+    margin-left: 20px;
+    /* Adjust the space between the radio button and label */
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 25px;
+    color: #E0704E;
+    /* Adjust the gap between elements */
+}
+
+.filter-select {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 25px;
+    /* Adjust the gap between elements */
+}
+
+.search-button {
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 25px;
+    /* Adjust the gap between elements */
+    font-weight: bold;
+    color: white;
+    background-color: #E0704E;
+    /* Set the font weight to bold */
+}
+
+/* your list css */
+.yourlist-page-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.yourlist-heading {
+    color: #FF926A;
+    text-align: center;
+}
+
+.yourlist-content-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.yourlist {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+footer {
+    position: fixed;
+    /* Positions the footer relative to the browser window */
+    bottom: 0;
+    /* Positions the footer at the bottom of the viewport */
+    left: 0;
+    /* Ensures the footer is aligned to the left edge */
+    width: 100%;
+    /* Makes the footer span the entire width of the viewport */
+    background-color: white;
+    /* Optional: Adds a background color to the footer */
+    color: #003d3d;
+    /* Sets the text color to white */
+    text-align: center;
+    /* Center-aligns the text within the footer */
+    padding: 0px 0;
+    /* Adds padding to the top and bottom of the footer content */
+    max-height: 100px;
+}
+
+.footer-content {
+    max-width: 500px;
+    /* Adjust the max-width as needed */
+    margin: 0 auto;
+    /* Centers the content horizontally */
+}
