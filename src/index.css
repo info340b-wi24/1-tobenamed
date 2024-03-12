@@ -24,7 +24,10 @@ body {
     border: 2px solid #000; /* Set the border */
     cursor: pointer; /* Set the cursor to pointer */
 }
-
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
 
 .answers li button:active {
     background-color: #000; /* Change background color on hover */

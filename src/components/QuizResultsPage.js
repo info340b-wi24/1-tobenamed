@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 
 export function QuizResultsPage ({ userAnswers }) {
   const calculateResult = () => {
-    const counts = [0, 0, 0, 0]; // Initialize counts for each result type
+    const counts = [0, 0, 0, 0]; //starts w count zero
 
-    // Define the criteria for each scent type
     const criteria = [
       [0, 1], // GOURMAND: Indexes of questions where the first option corresponds to GOURMAND
       [1],    // FRUITY: Indexes of questions where the second option corresponds to FRUITY
@@ -13,7 +12,7 @@ export function QuizResultsPage ({ userAnswers }) {
       [3]     // WOODY: Indexes of questions where the fourth option corresponds to WOODY
     ];
 
-    // Count the occurrences of each answer based on the criteria
+    // Counting how many times
     userAnswers.forEach((answer, index) => {
       criteria.forEach((questionCriteria, scentIndex) => {
         if (questionCriteria.includes(index) && answer === 'Yes') {
