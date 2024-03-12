@@ -32,7 +32,7 @@ import NavBar from './NavBar';
 
 export function App() {
   const [savedPerfumes, setSavedPerfumes] = useState([]);
-  const [userAnswers, setUserAnswers] = useState([]); 
+  const [userAnswers] = useState([]); 
   return (
     <Router>
       <NavBar />
