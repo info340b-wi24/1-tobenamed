@@ -4,7 +4,7 @@ import { useNavigate} from 'react-router-dom';
 
 function QuizPage() {
   
-  // Define the questions and answers
+ 
   const questions = [
     {
       question: 'What\'s Your Favorite Season?',
@@ -28,10 +28,9 @@ function QuizPage() {
     }
   ];
 
-  // State to track user answers
+ 
   const [userAnswers, setUserAnswers] = useState(Array(questions.length).fill(''));
 
-  // Function to handle user answer selection
   const handleAnswerSelect = (questionIndex, selectedAnswer) => {
     setUserAnswers(prevAnswers => {
       const newAnswers = [...prevAnswers];
@@ -40,12 +39,11 @@ function QuizPage() {
     });
   };
 
-  // Function to handle quiz submission
-  const navigate = useNavigate(); // Get the navigate function
+  const navigate = useNavigate(); 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Navigate to QuizResultsPage with userAnswers
-    navigate('/quizresults'); // Navigate to the quiz results page
+ 
+    navigate('/quizresults'); 
   };
 
   return (
@@ -75,9 +73,15 @@ function QuizPage() {
             </ul>
           </section>
         ))}
-
-<Link to={{pathname: "/quizresults", state: { userAnswers }}} className="button-link" onClick={handleSubmit}>Submit</Link>
-
+<div className="button-container">
+  <Link
+    to={{ pathname: "/quizresults", state: { userAnswers } }}
+    className="button-link"
+    onClick={handleSubmit}
+  >
+    Submit
+  </Link>
+</div>
       
       </form>
     </div>

@@ -33,7 +33,10 @@ body {
     cursor: pointer;
     /* Set the cursor to pointer */
 }
-
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
 
 .answers li button:active {
     background-color: #000;
