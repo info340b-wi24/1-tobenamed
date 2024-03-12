@@ -59,11 +59,6 @@ export function QuizPage () {
 
       <Link to="/quizresults" className="button-link">Submit</Link>
       
-      
-      <footer>
-      <small> 2024 Find Your Perfume. All rights reserved.</small>
-        <small>Designed by Aldi Anika Sanmathi</small>
-      </footer>
     </div>
   );
 };

@@ -1,29 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function QuizResultsPage () {
-    return (
-        <div >
-         
-        <div class="overlay"></div>
+export function QuizResultsPage() {
+  return (
+    <div >
+
+      <div class="overlay"></div>
 
 
-        <div class="brown-box">
+      <div class="brown-box">
         <h2>Your Perfect Scent is...</h2>
         <h2>FRUITY</h2>
 
         <div class="button-container">
-        <Link to="/search" className="start-journey-button">See More Perfumes</Link>
-        
-    </div>
-    </div>
+          <Link to="/search" className="start-journey-button">See More Perfumes</Link>
 
-          <footer>
-          <small> 2024 Find Your Perfume. All rights reserved.</small>
-            <small>Designed by Aldi Anika Sanmathi</small>
-          </footer>
         </div>
-      );
+      </div>
+
+    </div>
+  );
 }
 
 export default QuizResultsPage;

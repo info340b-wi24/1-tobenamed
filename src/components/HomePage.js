@@ -13,12 +13,6 @@ export function HomePage () {
         <Link to="/quiz" className="start-journey-button">START YOUR JOURNEY</Link>
        
       </div>
-
-      <footer>
-        <div class="footer-content">
-          <small> 2024 Find Your Perfume. All rights reserved. Designed by Aldi Anika Sanmathi </small>
-        </div>
-      </footer>
     </div>
   );
 };
