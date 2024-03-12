@@ -4,161 +4,161 @@ import Perfumeimages from './imagePaths';
 
 const perfumes = [
             {
-                name: "Kilian",
+                name: "Love don't be shy",
                 image: Perfumeimages.killian,
                 brand: "Kilian",
                 scent: "Sweet",
                 price: "$$$"
             },
             {
-                name: "YSL Black Opium",
+                name: "Black Opium",
                 image: Perfumeimages.blackOpium,
                 brand: "YSL",
                 scent: "Spicy",
                 price: "$"
             },
             {
-                name: "Dolce & Gabana Light Blue",
+                name: "Light Blue",
                 image: Perfumeimages.lightBlue,
                 brand: "Dolce & Gabana",
                 scent: "Citrus",
                 price: "$"
             },
             {
-                name: "Juliette has a Gun",
+                name: "Not a Perfume",
                 image: Perfumeimages.julietteHasAGun,
                 brand: "Juliette has a Gun",
                 scent: "Musk",
                 price: "$$"
             },
             {
-                name: "Burberry",
+                name: "Her",
                 image: Perfumeimages.burberryHer,
                 brand: "Burberry",
                 scent: "Fruity",
                 price: "$$"
             },
             {
-                name: "Maison Margiela (REPLICA)",
+                name: "By the Fireplace",
                 image: Perfumeimages.fireplace,
                 brand: "Maison Margiela (REPLICA)",
                 scent: "Woody",
                 price: "$"
             },
             {
-                name: "Carolina Herrera",
+                name: "Good Girl Blush",
                 image: Perfumeimages.carolineHerrera,
-                brand: "Carolina Herrera",
+                brand: "Carolina Herrera ",
                 scent: "Floral",
                 price: "$$"
             },
             {
-                name: "Parfums de Marly",
+                name: "Delina",
                 image: Perfumeimages.deMarly,
                 brand: "Parfums de Marly",
                 scent: "Floral",
                 price: "$$$"
             },
             {
-                name: "Philosophy",
+                name: "Amazing Grace Magnolia",
                 image: Perfumeimages.Philosophy,
                 brand: "Philosophy",
                 scent: "Floral",
                 price: "$"
             },
             {
-                name: "By / Rosie Jane",
+                name: "Rosie",
                 image: Perfumeimages.RosieJane,
                 brand: "By / Rosie Jane",
                 scent: "Musk",
                 price: "$"
             },
             {
-                name: "Maison Margiela (REPLICA)",
+                name: "Whispers in the library",
                 image: Perfumeimages.whispersInTheLibrary,
                 brand: "Maison Margiela (REPLICA)",
                 scent: "Woody",
                 price: "$"
             },
             {
-                name: "Dossier",
+                name: "Woody Sandalwood",
                 image: Perfumeimages.woodysandal,
                 brand: "Dossier",
                 scent: "Woody",
                 price: "$"
             },
             {
-                name: "Initio",
+                name: "Musk Therapy",
                 image: Perfumeimages.musktherapy,
                 brand: "Initio",
                 scent: "Woody",
                 price: "$$$"
             },
             {
-                name: "Dossier",
+                name: "Gourmand White Flowers",
                 image: Perfumeimages.gourmandwhiteflowers,
                 brand: "Dossier",
                 scent: "Gourmand",
                 price: "$"
             },
             {
-                name: "Zara",
+                name: "Gourmand Addict",
                 image: Perfumeimages.gourmandaddict,
                 brand: "Zara",
                 scent: "Gourmand",
                 price: "$"
             },
             {
-                name: "Bath & Body Works",
+                name: "Fruity Sherbert Scoop",
                 image: Perfumeimages.fruitysherbert,
                 brand: "Bath & Body Works",
                 scent: "Fruity",
                 price: "$"
             },
             {
-                name: "Sabrina Carpenter",
+                name: "Sweet Tooth",
                 image: Perfumeimages.sweettooth,
                 brand: "Sabrina Carpenter",
                 scent: "Sweet",
                 price: "$"
             },
             {
-                name: "Tom Ford",
+                name: "Black Orchid",
                 image: Perfumeimages.blackOrchid,
                 brand: "Tom Ford",
                 scent: "Spicy",
                 price: "$$$"
             },
             {
-                name: "YSL",
+                name: " Mon Paris",
                 image: Perfumeimages.monParis,
                 brand: "YSL",
                 scent: "Fruity",
                 price: "$"
             },
             {
-                name: "Dossier",
+                name: "Ambery Vanilla",
                 image: Perfumeimages.amberyVanilla,
                 brand: "Dossier",
                 scent: "Spicy",
                 price: "$"
             },
             {
-                name: "Le Monde",
+                name: "Le Chai Epice ",
                 image: Perfumeimages.chai,
                 brand: "Le Monde",
                 scent: "Gourmand",
                 price: "$"
             },
             {
-                name: "Clinque",
+                name: "Clinque Happy",
                 image: Perfumeimages.happy,
                 brand: "Clinque",
                 scent: "Citrus",
                 price: "$"
             },
             {
-                name: "Fine'ry",
+                name: "I'm a Musk",
                 image: Perfumeimages.finery,
                 brand: "Fine'ry",
                 scent: "Musk",
@@ -211,19 +211,29 @@ export function SearchPage() {
 
     const filterPerfumes = () => {
         let filtered = perfumes;
-        if (selectedFilter !== 'all' && searchInput.trim() !== '') {
-            filtered = perfumes.filter(perfume => {
-                const isMatch = selectedFilter === 'Price'
-                    ? selectedPrice.includes(perfume[selectedFilter])
-                    : selectedFilter === 'Brand'
-                        ? selectedBrand.includes(perfume[selectedFilter])
-                        : selectedScent.includes(perfume[selectedFilter]);
-                return isMatch && (
-                    perfume[selectedFilter].toLowerCase().includes(searchInput.toLowerCase()) ||
-                    perfume.name.toLowerCase().includes(searchInput.toLowerCase())
+    
+        // Filter by search input
+        if (searchInput.trim() !== '') {
+            filtered = filtered.filter(perfume => {
+                return (
+                    perfume.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                    perfume.brand.toLowerCase().includes(searchInput.toLowerCase()) ||
+                    perfume.scent.toLowerCase().includes(searchInput.toLowerCase())
                 );
             });
         }
+    
+        // Filter by selected checkboxes
+        if (selectedPrice.length > 0) {
+            filtered = filtered.filter(perfume => selectedPrice.includes(perfume.price));
+        }
+        if (selectedBrand.length > 0) {
+            filtered = filtered.filter(perfume => selectedBrand.includes(perfume.brand));
+        }
+        if (selectedScent.length > 0) {
+            filtered = filtered.filter(perfume => selectedScent.includes(perfume.scent));
+        }
+    
         return filtered;
     };
 
