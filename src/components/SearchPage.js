@@ -223,6 +223,8 @@ export function SearchPage() {
         e.preventDefault();
         setFilteredPerfumes(filterPerfumes());
     };
+   
+      
 
     return (
         <div className="search-page-container">
@@ -292,5 +294,6 @@ export function SearchPage() {
         </div>
     );
 }
+
 
 export default SearchPage;
