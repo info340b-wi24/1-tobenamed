@@ -139,9 +139,7 @@ export function App() {
         />
       </Routes>
       <footer>
-        <div className="footer-content">
-          <p>&copy; ScentSeeker. All rights reserved. Designed by Aldi Anika Sanmathi</p>
-        </div>
+          <p className="footer-content">&copy; ScentSeeker. All rights reserved. Designed by Aldi Anika Sanmathi</p>
       </footer>
     </Router>
   );
