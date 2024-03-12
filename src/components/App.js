@@ -29,9 +29,27 @@ import SweetToothPage from './perfume/SweetToothPage';
 import WhispersInLibPage from './perfume/WhispersInLibPage';
 import WoodySandalPage from './perfume/WoodySandalPage';
 import NavBar from './NavBar'; 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
-export function App() {
+const firebaseConfig = {
+  apiKey: "AIzaSyBuK_Fr7beUJMpp46LbhPQvbeNHiE_lGfI",
+  authDomain: "info-340-final-scent-seeker.firebaseapp.com",
+  projectId: "info-340-final-scent-seeker",
+  storageBucket: "info-340-final-scent-seeker.appspot.com",
+  messagingSenderId: "701516229591",
+  appId: "1:701516229591:web:a1468c2e804be602e53992",
+  measurementId: "G-YZT1LFVY8C"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+function App() {
   const [savedPerfumes, setSavedPerfumes] = useState([]);
+
+  // Your component code goes here
+
 
   return (
     <Router>

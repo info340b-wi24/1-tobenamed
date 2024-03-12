@@ -1,0 +1,17 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  },
+  "database": {
+    "rules": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  },
+  "extensions": {},
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
