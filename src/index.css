@@ -459,6 +459,7 @@ p {
   }
 
     .filter-radio {
+        color: white;
         display: flex;
         flex-direction: column;
         gap: 15px; /* Adjust the gap between radio buttons and labels */
@@ -470,7 +471,7 @@ p {
     }
     
     .radio-span {
-        margin-left: 8px; /* Adjust the space between the radio button and label */
+        margin-left: 20px; /* Adjust the space between the radio button and label */
     }
     
   .search-input{
