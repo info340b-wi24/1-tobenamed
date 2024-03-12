@@ -320,13 +320,6 @@ export function SearchPage() {
                     </Link>
                 ))}
             </div>
-
-            <footer>
-                <div className="footer-content">
-                    <small>2024 Find Your Perfume. All rights reserved.</small>
-                    <small>Designed by Aldi Anika Sanmathi</small>
-                </div>
-            </footer>
         </div>
     );
 }

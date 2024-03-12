@@ -80,11 +80,6 @@ function QuizPage() {
 
       
       </form>
-
-      <footer>
-        <small> 2024 Find Your Perfume. All rights reserved.</small>
-        <small>Designed by Aldi Anika Sanmathi</small>
-      </footer>
     </div>
   );
 }

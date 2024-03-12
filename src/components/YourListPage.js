@@ -12,13 +12,6 @@ const YourListPage = ({ savedPerfumes }) => {
           ))}
         </ul>
       </div>
-
-      <footer>
-        <div className="footer-content">
-          <p>&copy; 2024 Find Your Perfume. All rights reserved.</p>
-          <small>Designed by Aldi Anika Sanmathi</small>
-        </div>
-      </footer>
     </div>
   );
 };

@@ -50,10 +50,6 @@ export function QuizResultsPage ({ userAnswers }) {
           <Link to="/search" className="start-journey-button">See More Perfumes</Link>
         </div>
       </div>
-      <footer>
-        <small> 2024 Find Your Perfume. All rights reserved.</small>
-        <small>Designed by Aldi Anika Sanmathi</small>
-      </footer>
     </div>
   );
 }
