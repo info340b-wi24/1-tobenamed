@@ -32,14 +32,14 @@ import NavBar from './NavBar';
 
 export function App() {
   const [savedPerfumes, setSavedPerfumes] = useState([]);
-
+  const [userAnswers, setUserAnswers] = useState([]); 
   return (
     <Router>
       <NavBar />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/quiz" element={<QuizPage />} />
-        <Route path="/quizresults" element={<QuizResultsPage />} />
+        <Route path="/quizresults" element={<QuizResultsPage userAnswers={userAnswers} />} />
         <Route path="/search" element={<SearchPage />} />
         <Route
           path="/YourListPage"

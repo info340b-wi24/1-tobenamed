@@ -11,6 +11,9 @@ body {
         margin: 0;
 
 }
+
+
+
 .answers li button {
     border-radius: 50%; /* Make the button circular */
     width: 10px; /* Set the width of the button */
@@ -23,9 +26,14 @@ body {
 }
 
 
-.answers li button:hover {
+.answers li button:active {
     background-color: #000; /* Change background color on hover */
     color: #fff; /* Change text color on hover */
+}
+
+.answers li button:active {
+    background-color: #000; /* Change background color when pressed */
+    color: #fff; /* Change text color when pressed */
 }
 
 .answers li button:active {
