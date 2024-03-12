@@ -223,20 +223,7 @@ export function SearchPage() {
         e.preventDefault();
         setFilteredPerfumes(filterPerfumes());
     };
-    const PerfumeCard = ({ perfume }) => (
-        <Link to={`/perfume/${perfume.id}`} className="perfume-link" key={perfume.id}>
-          <div className="perfume-item">
-            <div className="perfume-details">
-              <img src={perfume.image} alt={perfume.name} />
-              <h5>{perfume.brand}</h5>
-              <p>{perfume.name}</p>
-              <p>{perfume.scent}</p>
-              <p>{perfume.price}</p>
-            </div>
-          </div>
-        </Link>
-      );
-      export default PerfumeCard;
+   
       
 
     return (

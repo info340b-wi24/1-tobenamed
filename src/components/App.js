@@ -47,14 +47,11 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 function App() {
   const [savedPerfumes, setSavedPerfumes] = useState([]);
-<<<<<<< HEAD
 
   // Your component code goes here
 
 
-=======
   const [userAnswers] = useState([]); 
->>>>>>> 63050b484dfe6cbd744956a96cd3f0ac7e4e1d93
   return (
     <Router>
       <NavBar />
