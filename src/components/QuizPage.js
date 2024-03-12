@@ -1,52 +1,55 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function QuizPage() {
-  
- 
+  const navigate = useNavigate();
+
   const questions = [
     {
-      question: 'What\'s Your Favorite Season?',
-      options: ['Winter', 'Spring', 'Summer', 'Fall']
+      question: "What's Your Favorite Season?",
+      options: ['Winter', 'Spring', 'Summer', 'Fall'],
     },
     {
       question: 'When do You Typically Wear Perfume?',
-      options: ['Night Out', 'Date Night', 'Everyday', 'At Work']
+      options: ['Night Out', 'Date Night', 'Everyday', 'At Work'],
     },
     {
       question: 'How Do You Want Your Perfume to Make You Feel?',
-      options: ['Pretty', 'Happy', 'Comfortable', 'Confident']
+      options: ['Pretty', 'Happy', 'Comfortable', 'Confident'],
     },
     {
-      question: 'What\'s Your Role In Your Friend Group?',
-      options: ['The Leader', 'The Shoulder to Cry On', 'The Go-With-the-Flow', 'The Life of The Party']
+      question: "What's Your Role In Your Friend Group?",
+      options: [
+        'The Leader',
+        'The Shoulder to Cry On',
+        'The Go-With-the-Flow',
+        'The Life of The Party',
+      ],
     },
     {
       question: 'Do You Prefer Your Fragrance to',
-      options: ['Make a Statement', 'Be Your Skin but Better', 'Get You Compliments', 'Grab Peoples Attention']
-    }
+      options: [
+        'Make a Statement',
+        'Be Your Skin but Better',
+        'Get You Compliments',
+        'Grab Peoples Attention',
+      ],
+    },
   ];
 
- 
   const [userAnswers, setUserAnswers] = useState(Array(questions.length).fill(''));
 
   const handleAnswerSelect = (questionIndex, selectedAnswer) => {
-    setUserAnswers(prevAnswers => {
+    setUserAnswers((prevAnswers) => {
       const newAnswers = [...prevAnswers];
       newAnswers[questionIndex] = selectedAnswer;
       return newAnswers;
     });
   };
 
-  const navigate = useNavigate(); 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const selectedAnswers = Array.from(document.querySelectorAll('input[type=radio]:checked')).map(input => input.value);
-  
-    // Update the userAnswers state with the selected answers
-    setUserAnswers(selectedAnswers);
-    navigate('/quizresults'); 
+    navigate('/quizresults', { state: { userAnswers } });
   };
 
   return (
@@ -76,15 +79,15 @@ function QuizPage() {
             </ul>
           </section>
         ))}
-<div className="button-container">
-<Link
-  to={{ pathname: "/quizresults", state: { userAnswers } }}
-  className="button-link"
->
-  Submit
-</Link>
-</div>
-      
+        <div className="button-container">
+          <Link
+            to={{ pathname: '/quizresults', state: { userAnswers } }}
+            className="button-link"
+            onClick={handleSubmit}
+          >
+            Submit
+          </Link>
+        </div>
       </form>
     </div>
   );

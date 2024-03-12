@@ -276,7 +276,7 @@ export function SearchPage() {
 
             <div className="perfume-container">
                 {filteredPerfumes.map((perfume, index) => (
-                    <Link to={`/perfume/${index + 1}`} className="perfume-link" key={index}>
+                    <Link to={`/perfume/${perfume.name}`} className="perfume-link" key={index}>
                         <div className="perfume-item">
                             <div className="perfume-details">
                                 <img src={perfume.image} alt={perfume.name} />
