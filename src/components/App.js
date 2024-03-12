@@ -46,95 +46,95 @@ export function App() {
           element={<YourListPage savedPerfumes={savedPerfumes} />}
         />
         <Route
-          path="/perfume/1"
+          path="/perfume/Love don't be shy"
           element={<LoveDontBeShyPage setSavedPerfumes={setSavedPerfumes} perfumeName="Love Don't Be Shy" />}
         />
         <Route
-          path="/perfume/2"
+          path="/perfume/Black Opium"
           element={<BlackOpiumPage setSavedPerfumes={setSavedPerfumes} perfumeName="Black Opium" />}
         />
         <Route
-          path="/perfume/3"
+          path="/perfume/Light Blue"
           element={<LightBluePage setSavedPerfumes={setSavedPerfumes} perfumeName="Light Blue" />}
         />
         <Route
-          path="/perfume/4"
+          path="/perfume/Not a Perfume"
           element={<NotAPerfumePage setSavedPerfumes={setSavedPerfumes} perfumeName="Not A Perfume" />}
         />
         <Route
-          path="/perfume/5"
+          path="/perfume/Her"
           element={<HerPage setSavedPerfumes={setSavedPerfumes} perfumeName="Her" />}
         />
         <Route
-          path="/perfume/6"
+          path="/perfume/By the Fireplace"
           element={<ByTheFirePlacePage setSavedPerfumes={setSavedPerfumes} perfumeName="By the Fire Place" />}
         />
         <Route
-          path="/perfume/7"
+          path="/perfume/Good Girl Blush"
           element={<GoodGirlPage setSavedPerfumes={setSavedPerfumes} perfumeName="Good Girl Blush" />}
         />
         <Route
-          path="/perfume/8"
+          path="/perfume/Delina"
           element={<DelinaPage setSavedPerfumes={setSavedPerfumes} perfumeName="Delina Parfums de Marly" />}
         />
         <Route
-          path="/perfume/9"
+          path="/perfume/Amazing Grace Magnolia"
           element={<AmazingGraceMagnoliaPage setSavedPerfumes={setSavedPerfumes} perfumeName="Amazing Grace Magnolia" />}
         />
         <Route
-          path="/perfume/10"
+          path="/perfume/Rosie"
           element={<RosiePage setSavedPerfumes={setSavedPerfumes} perfumeName="Rosie" />}
         />
         <Route
-          path="/perfume/11"
+          path="/perfume/Whispers in the library"
           element={<WhispersInLibPage setSavedPerfumes={setSavedPerfumes} perfumeName="Whispers in the Library" />}
         />
         <Route
-          path="/perfume/12"
+          path="/perfume/Woody Sandalwood"
           element={<WoodySandalPage setSavedPerfumes={setSavedPerfumes} perfumeName="Woody Sandalwood" />}
         />
         <Route
-          path="/perfume/13"
+          path="/perfume/Musk Therapy"
           element={<MuskTherapyPage setSavedPerfumes={setSavedPerfumes} perfumeName="Musk Therapy" />}
         />
         <Route
-          path="/perfume/14"
+          path="/perfume/Gourmand White Flowers"
           element={<GourmandWhiteFlowersPage setSavedPerfumes={setSavedPerfumes} perfumeName="Gourmand White Flowers" />}
         />
         <Route
-          path="/perfume/15"
+          path="/perfume/Gourmand Addict"
           element={<GourmandAddictPage setSavedPerfumes={setSavedPerfumes} perfumeName="Gourmand Addict" />}
         />
         <Route
-          path="/perfume/16"
+          path="/perfume/Fruity Sherbert Scoop"
           element={<FruitySherbertPage setSavedPerfumes={setSavedPerfumes} perfumeName="Fruity Sherbert Scoop" />}
         />
         <Route
-          path="/perfume/17"
+          path="/perfume/Sweet Tooth"
           element={<SweetToothPage setSavedPerfumes={setSavedPerfumes} perfumeName="Sweet Tooth" />}
         />
         <Route
-          path="/perfume/18"
+          path="/perfume/Black Orchid"
           element={<BlackOrchidPage setSavedPerfumes={setSavedPerfumes} perfumeName="Black Orchid" />}
         />
         <Route
-          path="/perfume/19"
+          path="/perfume/ Mon Paris"
           element={<MonParisPage setSavedPerfumes={setSavedPerfumes} perfumeName="Mon Paris" />}
         />
         <Route
-          path="/perfume/20"
+          path="/perfume/Ambery Vanilla"
           element={<AmberyVanillaPage setSavedPerfumes={setSavedPerfumes} perfumeName="Ambery Vanila" />}
         />
         <Route
-          path="/perfume/21"
+          path="/perfume/Le Chai Epice"
           element={<ChaiEpicePage setSavedPerfumes={setSavedPerfumes} perfumeName="Chai Epice" />}
         />
         <Route
-          path="/perfume/22"
+          path="/perfume/Clinque Happy"
           element={<CliniqueHappyPage setSavedPerfumes={setSavedPerfumes} perfumeName="Clinque Happy" />}
         />
         <Route
-          path="/perfume/23"
+          path="/perfume/I'm a Musk"
           element={<ImAMuskPage setSavedPerfumes={setSavedPerfumes} perfumeName="I'm a Musk" />}
         />
       </Routes>
