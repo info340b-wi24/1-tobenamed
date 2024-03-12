@@ -138,6 +138,11 @@ export function App() {
           element={<ImAMuskPage setSavedPerfumes={setSavedPerfumes} perfumeName="I'm a Musk" />}
         />
       </Routes>
+      <footer>
+        <div className="footer-content">
+          <p>&copy; ScentSeeker. All rights reserved. Designed by Aldi Anika Sanmathi</p>
+        </div>
+      </footer>
     </Router>
   );
 }
