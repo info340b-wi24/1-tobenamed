@@ -14,4 +14,11 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   }
+  import { logEvent } from "firebase/analytics";
+
+logEvent(analytics, 'custom_event', {
+    parameter1: 'value1',
+    parameter2: 'value2'
+});
+
 }
