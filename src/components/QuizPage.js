@@ -42,7 +42,10 @@ function QuizPage() {
   const navigate = useNavigate(); 
   const handleSubmit = (event) => {
     event.preventDefault();
- 
+    const selectedAnswers = Array.from(document.querySelectorAll('input[type=radio]:checked')).map(input => input.value);
+  
+    // Update the userAnswers state with the selected answers
+    setUserAnswers(selectedAnswers);
     navigate('/quizresults'); 
   };
 
@@ -74,13 +77,12 @@ function QuizPage() {
           </section>
         ))}
 <div className="button-container">
-  <Link
-    to={{ pathname: "/quizresults", state: { userAnswers } }}
-    className="button-link"
-    onClick={handleSubmit}
-  >
-    Submit
-  </Link>
+<Link
+  to={{ pathname: "/quizresults", state: { userAnswers } }}
+  className="button-link"
+>
+  Submit
+</Link>
 </div>
       
       </form>

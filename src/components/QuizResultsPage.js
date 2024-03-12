@@ -36,31 +36,21 @@ export function QuizResultsPage ({ userAnswers }) {
   ];
 
   const calculateResult = () => {
-    const counts = [0, 0, 0, 0]; //starts w count zero
-
-    const criteria = [
-      [0, 1], // GOURMAND: Indexes of questions where the first option corresponds to GOURMAND
-      [1], // FRUITY: Indexes of questions where the second option corresponds to FRUITY
-      [2], // SPICY: Indexes of questions where the third option corresponds to SPICY
-      [3], // WOODY: Indexes of questions where the fourth option corresponds to WOODY
-    ];
-
-    // Counting how many times
+    const counts = [0, 0, 0, 0]; // Initialize counts for each scent category
+  
     userAnswers.forEach((answer, index) => {
-      criteria.forEach((questionCriteria, scentIndex) => {
-        if (
-          questionCriteria.includes(index) &&
-          answer === questions[index].options[0]
-        ) {
-          counts[scentIndex]++;
+      questions[index].options.forEach((option, optionIndex) => {
+        if (answer === option) {
+          // Increment count for the corresponding scent category
+          counts[optionIndex]++;
         }
       });
     });
-
-    // result based on the counts
-    const maxCountIndex = counts.indexOf(Math.max(...counts));
-
   
+    // Determine the scent category with the highest count
+    const maxCountIndex = counts.indexOf(Math.max(...counts));
+  
+    // Return the scent category based on the max count
     switch (maxCountIndex) {
       case 0:
         return "GOURMAND";
@@ -71,9 +61,10 @@ export function QuizResultsPage ({ userAnswers }) {
       case 3:
         return "WOODY";
       default:
-        return "FRUITY"; 
+        return "FRUITY"; // Default result
     }
   };
+  
 
   return (
     <div>
