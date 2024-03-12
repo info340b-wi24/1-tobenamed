@@ -4,36 +4,46 @@ import { Link, useLocation } from 'react-router-dom';
 export function QuizResultsPage() {
   const location = useLocation();
   const userAnswers = location.state?.userAnswers || [];
+  
+  console.log('User Answers:', userAnswers);
 
   const calculateResult = () => {
-    console.log('User Answers:', userAnswers);
+    const counts = [0, 0, 0, 0]; 
 
-    const counts = [0, 0, 0, 0]; // Initialize counts for each result type
+  
+    const answerMap = {
+      "Winter": 0,
+      "Spring": 1,
+      "Summer": 2,
+      "Fall": 3,
+      "Night Out": 0,
+      "Date Night": 1,
+      "Everyday": 2,
+      "At Work": 3,
+      "Pretty": 0,
+      "Happy": 1,
+      "Comfortable": 2,
+      "Confident": 3,
+      "The Leader": 0,
+      "The Shoulder to Cry On": 1,
+      "The Go-With-the-Flow": 2,
+      "The Life of The Party": 3,
+      "Make a Statement": 0,
+      "Be Your Skin but Better": 1,
+      "Get You Compliments": 2,
+      "Grab Peoples Attention": 3
+    };
 
-    // Define the criteria for each scent type
-    const criteria = [
-      [0],   // GOURMAND: Questions where the first option corresponds to GOURMAND
-      [1],   // FRUITY: Questions where the second option corresponds to FRUITY
-      [2],   // SPICY: Questions where the third option corresponds to SPICY
-      [3]    // WOODY: Questions where the fourth option corresponds to WOODY
-    ];
-
-    // Count the occurrences of each answer based on the criteria
-    userAnswers.forEach((answer, index) => {
-      criteria.forEach((questionCriteria, scentIndex) => {
-        if (questionCriteria.includes(index) && answer === questionCriteria[0]) {
-          counts[scentIndex]++;
-        }
-      });
+   
+    userAnswers.forEach((answer) => {
+      const index = answerMap[answer];
+      if (index !== undefined) {
+        counts[index]++;
+      }
     });
 
-    // Log counts
-    console.log('Counts:', counts);
-
-    // Determine the result based on the counts
     const maxCountIndex = counts.indexOf(Math.max(...counts));
 
-    // Return the corresponding result based on the max count
     switch (maxCountIndex) {
       case 0:
         return 'GOURMAND';
@@ -47,7 +57,6 @@ export function QuizResultsPage() {
         return 'FRUITY'; // Default result
     }
   };
-  
 
   return (
     <div>
